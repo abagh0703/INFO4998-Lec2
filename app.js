@@ -1,9 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 // VAR IS BAD
 
 // Set up the express app
 const app = express();
 app.use(express.static('public'));
+app.use(bodyParser.json());
 
 
 const db =  [
@@ -25,7 +27,7 @@ app.get('/api/v1/todos', (req, res) => {
 
 app.post('/api/v1/todos', (req, res) => {
   //modify something here
-  console.log(req);
+  console.log(req.body);
 });
 
 const PORT = 3000;

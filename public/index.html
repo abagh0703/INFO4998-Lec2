@@ -9,6 +9,17 @@
         const result = await fetch('/api/v1/todos');
         const json = await result.json();
         console.log(json);
+
+        const result2 = await fetch('/api/v1/todos', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({a: 1, b: 'Textual content'})
+        });
+        const json2 = await result2.json();
+        console.log(json2);
       })();
     </script>
 </head>

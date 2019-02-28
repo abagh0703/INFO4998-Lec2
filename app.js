@@ -1,4 +1,5 @@
 const express = require('express');
+// VAR IS BAD
 
 // Set up the express app
 const app = express();
@@ -20,6 +21,11 @@ app.get('/api/v1/todos', (req, res) => {
     message: 'todos retrieved successfully',
     todos: db
   })
+});
+
+app.post('/api/v1/todos', (req, res) => {
+  //modify something here
+  console.log(req);
 });
 
 const PORT = 3000;

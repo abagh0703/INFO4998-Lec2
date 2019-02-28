@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Express Demo</title>
+    <script>
+      (async () => {
+        const result = await fetch('/api/v1/todos');
+        const json = await result.json();
+        console.log(json);
+      })();
+    </script>
+</head>
+<body>
+<header>
+    <h1>Express is cool</h1>
+</header>
+</body>
+</html>
